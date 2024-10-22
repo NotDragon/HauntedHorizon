@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit'
 import { dev } from '$app/environment'
-import { PRIVATE_STRIPE_SECRET_KEY, ZOHO_PASS } from '$env/static/private'
+import { PRIVATE_STRIPE_SECRET_KEY, ZOHO_PASSPHRASE } from '$env/static/private'
 import { PUBLIC_AUTHDOMAIN } from '$env/static/public'
 import { addCustomClaims } from '$lib/firebase/admin.server'
 import type { UserRecord } from 'firebase-admin/auth'
@@ -22,7 +22,7 @@ const sendMail = async (user: UserRecord) => {
 		secure: true, // Use true for SSL and false for TLS
 		auth: {
 		  user: 'info@haunted-horizon.com',
-		  pass: `${ZOHO_PASS}`,
+		  pass: `${ZOHO_PASSPHRASE}`,
 		},
 	  });
   
