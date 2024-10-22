@@ -22,7 +22,7 @@ const sendMail = async (user: UserRecord) => {
 		secure: true, // Use true for SSL and false for TLS
 		auth: {
 		  user: 'info@haunted-horizon.com',
-		  pass: `${ZOHO_PASSPHRASE}`,
+		  pass: ZOHO_PASSPHRASE,
 		},
 	  });
   
