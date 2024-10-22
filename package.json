@@ -3,7 +3,7 @@
 	"version": "0.1.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -15,6 +15,8 @@
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/kit": "^1.22.3",
 		"@types/marked": "^5.0.1",
+		"@types/nodemailer": "^6.4.16",
+		"@types/uuid": "^10.0.0",
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
 		"eslint": "^8.45.0",
@@ -32,7 +34,9 @@
 		"firebase": "^9.23.0",
 		"firebase-admin": "^11.9.0",
 		"marked": "^5.1.1",
-		"stripe": "^12.14.0"
+		"nodemailer": "^6.9.15",
+		"stripe": "^12.14.0",
+		"uuid": "^10.0.0"
 	},
 	"type": "module"
 }

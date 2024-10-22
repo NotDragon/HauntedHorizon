@@ -1,13 +1,13 @@
 import { goto } from '$app/navigation'
 import {
-	PUBLIC_FIREBASE_APIKEY,
-	PUBLIC_FIREBASE_APPID
+	PUBLIC_APIKEY,
+	PUBLIC_APPID
 	// PUBLIC_FIREBASE_MEASUREMENTID
 	,
-	PUBLIC_FIREBASE_AUTHDOMAIN,
-	PUBLIC_FIREBASE_MESSAGINGSENDERID,
-	PUBLIC_FIREBASE_PROJECTID,
-	PUBLIC_FIREBASE_STORAGEBUCKET
+	PUBLIC_AUTHDOMAIN,
+	PUBLIC_MESSAGINGSENDERID,
+	PUBLIC_PROJECTID,
+	PUBLIC_STORAGEBUCKET
 } from '$env/static/public'
 import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app'
 import { GoogleAuthProvider, signOut as _signOut, getAuth, signInWithPopup } from 'firebase/auth'
@@ -24,13 +24,13 @@ import {
 import { readable } from 'svelte/store'
 
 export const firebaseConfig = {
-	apiKey: PUBLIC_FIREBASE_APIKEY,
-	authDomain: PUBLIC_FIREBASE_AUTHDOMAIN,
-	projectId: PUBLIC_FIREBASE_PROJECTID,
-	storageBucket: PUBLIC_FIREBASE_STORAGEBUCKET,
-	messagingSenderId: PUBLIC_FIREBASE_MESSAGINGSENDERID,
-	appId: PUBLIC_FIREBASE_APPID
-	// measurementId: PUBLIC_FIREBASE_MEASUREMENTID
+	apiKey: PUBLIC_APIKEY,
+	authDomain: PUBLIC_AUTHDOMAIN,
+	projectId: PUBLIC_PROJECTID,
+	storageBucket: PUBLIC_STORAGEBUCKET,
+	messagingSenderId: PUBLIC_MESSAGINGSENDERID,
+	appId: PUBLIC_APPID
+	//measurementId: PUBLIC_FIREBASE_MEASUREMENTID
 }
 
 export const makeApp: () => FirebaseApp = () => {

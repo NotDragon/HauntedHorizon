@@ -37,7 +37,7 @@ export const actions = {
 		const data = await request.formData()
 		const price = data.get('price') as string
 		const { user } = locals
-
+		
 		return checkout(user, price)
 	}
 } satisfies Actions

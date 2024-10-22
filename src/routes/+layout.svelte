@@ -20,18 +20,24 @@
 
 <!-- Default Title -->
 <svelte:head>
-	<title>SvelteKit Firebase</title>
+	<title>Haunted Horizon</title>
 </svelte:head>
 
-<header class="container">
-	<a href="/" id="logo">SvelteKit Firebase</a>
+<header class="navbar">
+	<a href="/" id="logo">Haunted Horizon</a>
 	<nav>
 		<ul>
 			<li>
 				<a href="/">Home</a>
 			</li>
 			<li>
-				<a href="/pricing">Pricing</a>
+				<a href="/pricing">Learn More</a>
+			</li>
+			<li>
+				<a href="/pricing">About</a>
+			</li>
+			<li>
+				<a href="/pricing">Buy Tickets</a>
 			</li>
 			{#if user}
 				<li>
@@ -48,7 +54,7 @@
 	</nav>
 </header>
 
-<main class="container">
+<main>
 	<slot />
 </main>
 
@@ -60,7 +66,6 @@
 					>GitHub</a>
 			</li>
 		</ul>
-
 		{#if user?.customClaims?.admin}
 			<ul>
 				<li>
@@ -88,5 +93,18 @@
 		text-decoration: none;
 		font-size: 1.5rem;
 		font-weight: 400;
+	}
+
+	.navbar {
+		position: fixed;
+		background-color: #2b2626;
+		right: 0;
+		left: 0;
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		width: 100vw;
+
+		padding-right: 2rem;
+		padding-left: 2rem;
 	}
 </style>

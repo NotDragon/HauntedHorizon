@@ -1,6 +1,6 @@
 [data-theme='dark'] {
 	--text: #fafafa;
-	--background: #050505;
+	--background: #3E4243;
 	--primary: #f17e87;
 	--secondary: #2e1605;
 	--accent: #f075bd;
@@ -19,10 +19,10 @@
 @media only screen and (prefers-color-scheme: dark) {
 	:root:not([data-theme]) {
 		--text: #fafafa;
-		--background: #050505;
-		--primary: #f17e87;
-		--secondary: #2e1605;
-		--accent: #f075bd;
+		--background: #3E4243;
+		--primary: #D76B00;
+		--secondary: #2D2B2B;
+		--accent: #F0D8A8;
 		/* --text: #fafafa;
 		--background: #050505;
 		--secondary: #b38ffd;

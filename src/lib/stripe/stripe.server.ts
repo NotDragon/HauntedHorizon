@@ -1,17 +1,45 @@
 import { redirect } from '@sveltejs/kit'
 import { dev } from '$app/environment'
-import { PRIVATE_STRIPE_SECRET_KEY } from '$env/static/private'
-import { PUBLIC_FIREBASE_AUTHDOMAIN } from '$env/static/public'
+import { PRIVATE_STRIPE_SECRET_KEY, ZOHO_PASS } from '$env/static/private'
+import { PUBLIC_AUTHDOMAIN } from '$env/static/public'
 import { addCustomClaims } from '$lib/firebase/admin.server'
 import type { UserRecord } from 'firebase-admin/auth'
+import { v4 as uuidv4 } from 'uuid';
+import * as nodemailer from 'nodemailer';
 import Stripe from 'stripe'
 
-const url = dev ? 'http://localhost:5173' : `https://${PUBLIC_FIREBASE_AUTHDOMAIN}`
+const url = dev ? 'http://localhost:5173' : `https://${PUBLIC_AUTHDOMAIN}`
 export const checkoutSessionParameter = 'checkoutSession'
 
 export const stripe = new Stripe(PRIVATE_STRIPE_SECRET_KEY, {
 	apiVersion: '2022-11-15'
 })
+
+const sendMail = async (user: UserRecord) => {
+	const transporter = nodemailer.createTransport({
+		host: 'smtppro.zoho.eu',
+		port: 465, // Use 587 if you prefer TLS
+		secure: true, // Use true for SSL and false for TLS
+		auth: {
+		  user: 'info@haunted-horizon.com',
+		  pass: `${ZOHO_PASS}`,
+		},
+	  });
+  
+	const mailOptions = {
+		from: 'info@haunted-horizon.com',
+		to: user.email,
+		subject: 'Your Purchase Code',
+		text: `Thank you for your purchase! Here is your unique code: ${uuidv4()}`,
+	  };
+
+	  try {
+		await transporter.sendMail(mailOptions);
+		console.log('Email sent successfully');
+	  } catch (error) {
+		console.error('Error sending email:', error);
+	  }
+}
 
 export const checkout = async (user: UserRecord, price: string) => {
 	const customer = await getCustomer(user)
@@ -27,11 +55,13 @@ export const checkout = async (user: UserRecord, price: string) => {
 		customer_update: {
 			address: 'auto'
 		},
-		mode: 'subscription',
+		mode: 'payment',
 		success_url: `${url}/pricing?${checkoutSessionParameter}={CHECKOUT_SESSION_ID}`,
 		cancel_url: `${url}/pricing`,
 		automatic_tax: { enabled: true }
 	})
+
+	await sendMail(user)
 
 	throw redirect(303, session.url as string)
 }

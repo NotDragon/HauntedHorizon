@@ -27,3 +27,8 @@
 @import 'utilities/tooltip.css';
 @import 'utilities/accessibility.css';
 @import 'utilities/reduce-motion.css';
+
+@font-face {
+    font-family: 'Creepy';
+    src: url('/fonts/maneaterbb_reg.ttf');
+  }
