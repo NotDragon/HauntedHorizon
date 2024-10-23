@@ -11,121 +11,25 @@
 
 <div class="ticket-section">
 	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
+		<img src="/images/slide_1_bg_image.png" />
+		<h2>Overview</h2>
 		<p>Get ready for a thrilling adventure!</p>
 		<button>Buy Ticket</button>
 	</div>
 	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
+		<img src="/images/slide_2_bg_image.png" />
+		<h2>Event Detail</h2>
 		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
+		<button>Learn More</button>
 	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
+	<div class="ticket-card-small">
+		<img src="/images/location_icon.png" />
+		<h2>Date & Time</h2>
 		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
 	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
+	<div class="ticket-card-small">
+		<h2>Location</h2>
 		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
-		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
-		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
-		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
-		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
-	</div>
-</div>
-<div class="ticket-section">
-	<div class="ticket-card">
-		<h2>Haunted Horizon</h2>
-		<p>Get ready for a thrilling adventure!</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Quick Info</h2>
-		<p>Learn more about our haunted attractions.</p>
-		<button>Buy Ticket</button>
-	</div>
-	<div class="ticket-card">
-		<h2>Buy Tickets</h2>
-		<p>Reserve your place now for the ultimate scare!</p>
-		<button>Buy Ticket</button>
 	</div>
 </div>
 
@@ -157,9 +61,32 @@
 		background: #1a1a1a;
 		padding: 20px;
 		border-radius: 10px;
-		width: 200px;
+		width: 25vw;
 		text-align: center;
 		color: #f39c12;
+		border: 2px solid;
+		border-image: linear-gradient(to right, rgb(107, 64, 41), rgb(107, 48, 41)) 1;
+	}
+
+	.ticket-section img {
+		width: 20vw;
+		aspect-ratio: 2;
+		object-fit: cover;
+	}
+
+	.ticket-card-small {
+		background: #1a1a1a;
+		padding: 20px;
+		border-radius: 10px;
+		width: 15vw;
+		text-align: center;
+		color: #f39c12;
+		border: 2px solid;
+		border-image: linear-gradient(to right, rgb(107, 64, 41), rgb(107, 48, 41)) 1;
+	}
+
+	.ticket-card-small img {
+		object-fit: contain;
 	}
 
 	.title {
@@ -169,11 +96,11 @@
 
 	button {
 		margin-top: 10px;
-		background: #f39c12;
+		background: var(--primary);
 		color: #181818;
 		border: none;
 		padding: 10px;
-		border-radius: 5px;
+		border-radius: var(--border-radius);
 		cursor: pointer;
 	}
 </style>

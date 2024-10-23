@@ -31,10 +31,7 @@
 				<a href="/">Home</a>
 			</li>
 			<li>
-				<a href="/pricing">Learn More</a>
-			</li>
-			<li>
-				<a href="/pricing">About</a>
+				<a href="/learnmore">Learn More</a>
 			</li>
 			<li>
 				<a href="/pricing">Buy Tickets</a>
