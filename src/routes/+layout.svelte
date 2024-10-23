@@ -27,14 +27,15 @@
 	<a href="/" id="logo">Haunted Horizon</a>
 	<nav>
 		<ul>
-			<li>
+			<!-- <li>
 				<a href="/">Home</a>
-			</li>
+			</li> -->
 			<!-- <li>
 				<a href="/learnmore">Learn More</a>
 			</li> -->
 			<li>
-				<a href="https://forms.gle/WeXpf5B6XTgPNUG4A">Reserve Tickets</a>
+				<button on:click={() => goto('https://forms.gle/WeXpf5B6XTgPNUG4A')}
+					>Reserve Tickets</button>
 			</li>
 			{#if user}
 				<li>
