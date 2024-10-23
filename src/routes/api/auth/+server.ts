@@ -12,6 +12,8 @@ export const POST = (async ({ request }) => {
 			expiresIn: 60 * 60 * 24 * 5 * 1000
 		})
 
+		console.log(`__session: ${__session}`);
+
 		saveUser(token)
 
 		return new Response(__session, {
@@ -21,7 +23,7 @@ export const POST = (async ({ request }) => {
 			}
 		})
 	} catch (e) {
-		console.log(`auth/server.ts ${token} ${request}`, e)
+		console.log(`auth/server.ts`, e)
 	}
 	return new Response(null, {
 		status: 500
