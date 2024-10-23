@@ -34,7 +34,7 @@
 				<a href="/learnmore">Learn More</a>
 			</li> -->
 			<li>
-				<a href="/pricing">Buy Tickets</a>
+				<a href="https://forms.gle/WeXpf5B6XTgPNUG4A">Reserve Tickets</a>
 			</li>
 			{#if user}
 				<li>
