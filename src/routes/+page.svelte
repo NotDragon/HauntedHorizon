@@ -23,7 +23,7 @@
 		<ul>
 			<li>Ticket Price: €15.00 (includes a free drink and Nachos)</li>
 		</ul>
-		<button on:click={() => goto('/pricing')}>Buy Ticket</button>
+		<button on:click={() => goto('https://forms.gle/WeXpf5B6XTgPNUG4A')}>Reserve Tickets</button>
 	</div>
 	<div class="ticket-card">
 		<img src="/images/slide_2_bg_image.png" />

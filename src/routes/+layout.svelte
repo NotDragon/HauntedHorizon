@@ -27,25 +27,26 @@
 	<a href="/" id="logo">Haunted Horizon</a>
 	<nav>
 		<ul>
-			<li>
+			<!-- <li>
 				<a href="/">Home</a>
-			</li>
+			</li> -->
 			<!-- <li>
 				<a href="/learnmore">Learn More</a>
 			</li> -->
 			<li>
-				<a href="/pricing">Buy Tickets</a>
+				<button on:click={() => goto('https://forms.gle/WeXpf5B6XTgPNUG4A')}
+					>Reserve Tickets</button>
 			</li>
 			{#if user}
 				<li>
 					<a href="/user" role="button" class="outline">{user?.displayName}</a>
 				</li>
 			{:else}
-				<li>
-					<!-- <a href="/user" role="button">Login</a> -->
-					<!-- svelte-ignore a11y-no-redundant-roles -->
-					<button on:click={() => signInDialog.show()} role="button">Login</button>
-				</li>
+				<!-- <li> -->
+				<!-- <a href="/user" role="button">Login</a> -->
+				<!-- svelte-ignore a11y-no-redundant-roles -->
+				<!-- <button on:click={() => signInDialog.show()} role="button">Login</button> -->
+				<!-- </li> -->
 			{/if}
 		</ul>
 	</nav>
