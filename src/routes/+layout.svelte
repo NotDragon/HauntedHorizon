@@ -42,11 +42,11 @@
 					<a href="/user" role="button" class="outline">{user?.displayName}</a>
 				</li>
 			{:else}
-				<li>
-					<!-- <a href="/user" role="button">Login</a> -->
-					<!-- svelte-ignore a11y-no-redundant-roles -->
-					<!-- <button on:click={() => signInDialog.show()} role="button">Login</button> -->
-				</li>
+				<!-- <li> -->
+				<!-- <a href="/user" role="button">Login</a> -->
+				<!-- svelte-ignore a11y-no-redundant-roles -->
+				<!-- <button on:click={() => signInDialog.show()} role="button">Login</button> -->
+				<!-- </li> -->
 			{/if}
 		</ul>
 	</nav>
