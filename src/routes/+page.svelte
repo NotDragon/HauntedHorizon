@@ -41,7 +41,7 @@
 		<img src="/images/calendar_icon.png" />
 		<h4>When?</h4>
 		<p>Date: <b style="color: var(--primary)">28th of October</b></p>
-		<p>Time: <b style="color: var(--primary)">16:00 - 24:00</b></p>
+		<p>Time: <b style="color: var(--primary)">17:00 - 24:00</b></p>
 	</div>
 	<div class="ticket-card-small">
 		<img src="/images/location_icon.png" />
