@@ -17,18 +17,16 @@ function makeApp() {
 		return apps[0]
 	}
 	const app = initializeApp(
-		dev
-			? {
+		{
 					credential: cert({
-						privateKey: PRIVATE_FIREBASE_ADMIN_KEY.replace(/(\n)|(\\n)/g, '\n'),
+						privateKey: PRIVATE_FIREBASE_ADMIN_KEY.replace(/\\n/g, '\n'),
 						clientEmail: PRIVATE_FIREBASE_ADMIN_CLIENT_EMAIL,
 						projectId: PUBLIC_PROJECTID
 					}),
 					projectId: PUBLIC_PROJECTID,
 					databaseURL: `https://${PUBLIC_PROJECTID}.firebaseio.com`,
 					storageBucket: PUBLIC_STORAGEBUCKET
-			  }
-			: undefined,
+			  },
 		PUBLIC_PROJECTID
 	)
 	const firestore = getFirestore(app)
