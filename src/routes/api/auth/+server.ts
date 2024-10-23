@@ -7,12 +7,11 @@ const secure = dev ? '' : 'Secure;'
 
 export const POST = (async ({ request }) => {
 	const { token } = await request.json()
+	await console.log(token);
 	try {
 		const __session = await auth.createSessionCookie(token, {
 			expiresIn: 60 * 60 * 24 * 5 * 1000
 		})
-
-		console.log(`__session: ${__session}`);
 
 		saveUser(token)
 
