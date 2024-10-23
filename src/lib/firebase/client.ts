@@ -87,8 +87,7 @@ export const newRef = async (ref: string) => _doc(collection(db, ref))
 export const signInWithGoogle = async () => {
 	const credentials = await signInWithPopup(auth, new GoogleAuthProvider())
 	const token = await credentials.user?.getIdToken(true)
-
-
+	console.log(token);
 	try {
 		await fetch('/api/auth', {
 			method: 'POST',
