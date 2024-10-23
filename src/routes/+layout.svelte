@@ -62,6 +62,7 @@
 				<a href="https://www.instagram.com/hauntedhorizon2024/" target="_blank" rel="noreferrer"
 					>Instagram</a>
 			</li>
+			<li>Email: info@haunted-horizon.com</li>
 		</ul>
 		{#if user?.customClaims?.admin}
 			<ul>
