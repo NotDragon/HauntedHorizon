@@ -1,4 +1,5 @@
 import { dev } from '$app/environment'
+import { PRIVATE_FIREBASE_ADMIN_KEY } from '$env/static/private'
 import type { RequestHandler } from './$types'
 import { auth, firestore } from '$lib/firebase/admin.server'
 
@@ -7,7 +8,7 @@ const secure = dev ? '' : 'Secure;'
 
 export const POST = (async ({ request }) => {
 	const { token } = await request.json()
-	await console.log(token);
+	await console.log(PRIVATE_FIREBASE_ADMIN_KEY);
 	try {
 		const __session = await auth.createSessionCookie(token, {
 			expiresIn: 60 * 60 * 24 * 5 * 1000
