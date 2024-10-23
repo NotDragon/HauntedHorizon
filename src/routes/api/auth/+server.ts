@@ -21,7 +21,7 @@ export const POST = (async ({ request }) => {
 			}
 		})
 	} catch (e) {
-		console.log('auth/server.ts a', e)
+		console.log(`auth/server.ts ${token} ${request}`, e)
 	}
 	return new Response(null, {
 		status: 500
