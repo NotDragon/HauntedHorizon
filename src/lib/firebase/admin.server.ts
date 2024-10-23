@@ -20,7 +20,7 @@ function makeApp() {
 		dev
 			? {
 					credential: cert({
-						privateKey: PRIVATE_FIREBASE_ADMIN_KEY.replace(/\\n/g, '\n'),
+						privateKey: PRIVATE_FIREBASE_ADMIN_KEY.replace(/(\n)|(\\n)/g, '\n'),
 						clientEmail: PRIVATE_FIREBASE_ADMIN_CLIENT_EMAIL,
 						projectId: PUBLIC_PROJECTID
 					}),
