@@ -18,7 +18,7 @@ export const POST = (async ({ request }) => {
 		return new Response(__session, {
 			status: 200,
 			headers: {
-				'set-cookie': `__session=${__session}; Max-Age=${expiresIn}; Path=/; HttpOnly; ${secure};`
+				'set-cookie': `__session=${__session}; Max-Age=${expiresIn}; Path=/; HttpOnly;;`
 			}
 		})
 	} catch (e) {
