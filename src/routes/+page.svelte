@@ -88,6 +88,7 @@
 		border-image: linear-gradient(to right, rgb(107, 64, 41), rgb(107, 48, 41)) 1;
 		border-radius: 10px;
 		padding-bottom: 12vh;
+		z-index: 1;
 	}
 
 	.ticket-section img {
@@ -107,6 +108,8 @@
 		border: 2px solid;
 		border-image: linear-gradient(to right, rgb(107, 64, 41), rgb(107, 48, 41)) 1;
 		padding-bottom: 12vh;
+
+		z-index: 1;
 	}
 
 	.ticket-card-small img {
@@ -146,5 +149,32 @@
 	#location-image {
 		width: 1rem;
 		height: 1rem;
+	}
+
+	@media screen and (max-width: 600px) {
+		.ticket-card-small {
+			width: 100%;
+			margin-bottom: 1vh;
+		}
+		.ticket-card {
+			width: 100%;
+			margin-bottom: 1vh;
+		}
+		.ticket-card-small img {
+			width: 50vw;
+			object-fit: contain;
+		}
+		.ticket-card img {
+			width: 50vw;
+			object-fit: contain;
+		}
+
+		.ticket-section {
+			display: block;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
 	}
 </style>

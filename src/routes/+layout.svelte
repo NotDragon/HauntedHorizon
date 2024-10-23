@@ -30,9 +30,9 @@
 			<li>
 				<a href="/">Home</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="/learnmore">Learn More</a>
-			</li>
+			</li> -->
 			<li>
 				<a href="/pricing">Buy Tickets</a>
 			</li>
@@ -59,8 +59,8 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="https://github.com/axel-rock/sveltekit-firebase" target="_blank" rel="noreferrer"
-					>GitHub</a>
+				<a href="https://www.instagram.com/hauntedhorizon2024/" target="_blank" rel="noreferrer"
+					>Instagram</a>
 			</li>
 		</ul>
 		{#if user?.customClaims?.admin}
@@ -103,5 +103,12 @@
 
 		padding-right: 2rem;
 		padding-left: 2rem;
+		z-index: 10;
+	}
+
+	@media screen and (max-width: 600px) {
+		#logo {
+			display: none;
+		}
 	}
 </style>
