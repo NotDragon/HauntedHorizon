@@ -21,8 +21,7 @@
 		<img src="/images/slide_1_bg_image.png" />
 		<h4>Overview</h4>
 		<ul>
-			<li>Online Purchase: €5.50 (includes a free drink)</li>
-			<li>At the Door: €7.00 (includes a free drink)</li>
+			<li>Ticket Price: €15 (includes a free drink and Nachos)</li>
 		</ul>
 		<button on:click={() => goto('/pricing')}>Buy Ticket</button>
 	</div>

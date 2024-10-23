@@ -18,8 +18,8 @@ export const stripe = new Stripe(PRIVATE_STRIPE_SECRET_KEY, {
 const sendMail = async (user: UserRecord) => {
 	const transporter = nodemailer.createTransport({
 		host: 'smtppro.zoho.eu',
-		port: 465, // Use 587 if you prefer TLS
-		secure: true, // Use true for SSL and false for TLS
+		port: 465,
+		secure: true,
 		auth: {
 		  user: 'info@haunted-horizon.com',
 		  pass: ZOHO_PASSPHRASE,
