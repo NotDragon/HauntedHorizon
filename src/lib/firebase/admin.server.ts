@@ -17,6 +17,8 @@ function makeApp() {
 		return apps[0]
 	}
 
+	console.log(PRIVATE_FIREBASE_ADMIN_KEY, PUBLIC_PROJECTID);
+
 	const app = initializeApp(
 		dev
 			? {
