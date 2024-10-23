@@ -21,7 +21,7 @@
 		<img src="/images/slide_1_bg_image.png" />
 		<h4>Overview</h4>
 		<ul>
-			<li>Ticket Price: €15 (includes a free drink and Nachos)</li>
+			<li>Ticket Price: €15.00 (includes a free drink and Nachos)</li>
 		</ul>
 		<button on:click={() => goto('/pricing')}>Buy Ticket</button>
 	</div>
@@ -46,9 +46,8 @@
 	<div class="ticket-card-small">
 		<img src="/images/location_icon.png" />
 		<h4>Where?</h4>
-		<p>Venue: 24/7 Events Cyprus</p>
-		<p>Address: Georgiou Christofidi 1A, Larnaca 6031</p>
-		<button on:click={() => goto('https://maps.app.goo.gl/KcPBPdJCu1cEG2Cn9')}
+		<p>Venue: Garden Café</p>
+		<button on:click={() => goto('https://maps.app.goo.gl/D5GAERUPNUXKkQ498')}
 			><img id="location-image" src="/images/Ei-location.png" /></button>
 	</div>
 </div>
