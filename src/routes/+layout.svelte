@@ -44,7 +44,7 @@
 				<li>
 					<!-- <a href="/user" role="button">Login</a> -->
 					<!-- svelte-ignore a11y-no-redundant-roles -->
-					<button on:click={() => signInDialog.show()} role="button">Login</button>
+					<!-- <button on:click={() => signInDialog.show()} role="button">Login</button> -->
 				</li>
 			{/if}
 		</ul>
